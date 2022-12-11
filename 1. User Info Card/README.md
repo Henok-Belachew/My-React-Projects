@@ -1,12 +1,11 @@
 ## Project Perview 
 
-<img align="center" src="./Perview.PNG" alt="">
-<p>
-    <h2>React Concepts Used:</h2>
-
+<img align="left"  src="./Perview.PNG" alt="">
+<p align="right"  style="width="39%">
+<p>React Concepts Used: </p>
     <ul>
         <li>JSX</li>
         <li>Renderring Elements</li>
         <li>Components</li>
     </ul>
-</p>
+</p>                   
