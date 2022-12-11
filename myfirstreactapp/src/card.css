@@ -18,7 +18,16 @@
 #headerimg {
   border-radius: 15px 15px 0 0;
 }
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.main {
+  width: 100%;
+}
 #img {
   border-radius: 100%;
   border: white solid 7px;
@@ -65,6 +74,10 @@
   font-size: medium;
 }
 
+.info h2 {
+  font-size: 18px;
+
+}
 .tag {
   font-size: small;
   /* outline: solid yellow; */
