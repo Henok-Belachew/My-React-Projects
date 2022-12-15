@@ -10,9 +10,7 @@ import MainContent from './Components/maincontent';
 
 
 
-
-
-function Card() { 
+const Card = function () { 
   return (
   
     <div className='container'>
@@ -31,7 +29,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
     <Card />
+  
 
 );
-
 
