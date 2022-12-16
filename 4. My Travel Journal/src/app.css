@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F55A5A;
+    color: white;
+    padding: 15px;
+}
+
+.header span {
+    width: 30%;
+    /* outline: solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: medium;
+}
+
+.header i {
+    font-size: 20px;
+}
+
+.img {
+    height: 168px;
+}
+
+.container {
+    display: flex;
+    /* margin-top: 40px; */
+    /* gap: 10px; */
+    /* border-bottom: 1px black solid; */
+
+}
+
+#line {
+    background-color: black;
+    height: 2px;
+    color: rgba(0, 0, 0, 0.726);
+    
+}
+
+.places {
+    padding: 25px 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.rightside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 20px;
+}
+.location {
+    letter-spacing: 2px;
+    font-size: small;
+}
+
+.location i {
+    color: #F55A5A;
+}
+
+.googlemap {
+    font-size: smaller;
+    /* text-decoration-line:; */
+    opacity: 50%;
+    text-decoration: none;
+    color: black;
+
+}
+.date {
+    font-weight: bold;
+}
+
+.lower p {
+    font-size: 10.24px;
+    margin-top: 5px;
+    
+}

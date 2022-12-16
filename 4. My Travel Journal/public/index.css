@@ -1,0 +1,12 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#root {
+    width: 40%;
+    /* background: rgb(170, 168, 168); */
+    /* height: 300px; */
+   margin: 10px auto;
+}
