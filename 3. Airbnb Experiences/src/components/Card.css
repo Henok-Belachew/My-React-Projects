@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    /* outline: solid red; */
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.header p {
+    font-size: 20px;
+    margin: 10px 0;
+    /* margin-bottom: 2000px; */
+    /* margin-top: 400px; */
+    display: block;
+    /* outline: blue solid; */
+}
+.disc {
+    font-size: 30px;
+}
+i {
+    color: red;
+    font-size: 17px;
+    /* position: absolute; */
+}
+.header h1{
+    font-size: 52px;
+    margin-bottom: auto;
+}
+
+.imgs {
+    margin-top: 15px;
+    margin-bottom: auto;
+    width: fit-content;
+    /* outline: solid yellow; */
+}
+
+
+.cards {
+    display: flex;
+    overflow-x: scroll;
+    /* outline: solid yellow; */
+}
+
+::-webkit-scrollbar {
+    overflow: hidden;
+}
+.img {
+    width: 254px;
+}
+
+.nav {
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+    height: 100px;
+    padding: 5px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navs {
+    width: 25%;
+    /* outline: solid red; */
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #FF5A5F;
+}
+
+.landing {
+    margin: 30px auto 45px ;
+    display: block;
+    width: 50%;
+    /* outline: solid red; */
+    /* margin: 50px; */
+    /* outline: solid red; */
+}
+
+.lower {
+    width: 70%;
+    margin: 0px auto;
+    /* outline: solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* height: 620px; */
+}
+.main {
+    /* height: 416px; */
+    /* outline: solid red 2px; */
+    margin-top: 20px;
+    margin: 20px 8px;
+    
+    position: relative;
+    /* background: #FF5A5F; */
+    width: fit-content;
+    padding: 10px;
+    color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.301); */
+}
+
+.main:hover {
+    box-shadow: 0 0 5px black;
+    cursor: pointer;
+}
+.country {
+    opacity: 60%;
+}
+
+.label {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    background-color: white;
+    font-size: smaller;
+    font-weight: bold;
+}
+.detail {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    /* height: 100%; */
+    width: 100%;
+    /* outline: solid blue; */
+    gap: 5px;
+}
+
+.price {
+    font-weight: bold;
+}
