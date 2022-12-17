@@ -1,0 +1,32 @@
+.container {
+	background: linear-gradient(180deg, rgba(2,0,36,1) 51%, rgba(4,97,116,1) 100%);
+	width: 30%;
+	height: 70vh;
+	border-radius: 15px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	
+}
+
+.container h1 {
+	font-size: 180px;
+	padding: 0px;
+	margin: -40px -0px 0px 0px;
+	/* font-family: Georgia, 'Times New Roman', Times, serif; */
+	/* color: white; */
+	/* color: rgb(45, 45, 105); */
+	color: #020024;
+}
+
+.container h2 {
+	font-size: 30px;
+	letter-spacing: 2px;
+}
