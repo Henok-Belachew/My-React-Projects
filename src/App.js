@@ -29,7 +29,7 @@ export default function App (){
 			<div id="sub" onClick={sub}>Decrement</div>
 			<div id="add" onClick={add}>Increment</div>
 		</div>
-        {num != 0 && <button id='reset' onClick={reset}> Reset </button>}
+        {num !== 0 && <button id='reset' onClick={reset}> Reset </button>}
         
         </>
     )
