@@ -8,7 +8,10 @@ export default function App (){
         update(num + 1)
     }
     function sub() {
-        update(num - 1)
+        if (num != 0) {
+            update(num - 1)
+        }
+        
     }
     function reset() {
         update(0)

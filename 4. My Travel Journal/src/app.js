@@ -11,16 +11,16 @@ export default function App () {
         </>)
     })
     return (
-        <>
-        <div className="header">
-            <span> <i class="fa-solid fa-earth-africa"></i> My Travel Journal</span>
-        </div>
-        <div className="places">
-            {place}
-            
-        </div>
+        <div className="container2">
+            <div className="header">
+                <span> <i class="fa-solid fa-earth-africa"></i> My Travel Journal</span>
+            </div>
+            <div className="places">
+                {place}
+                
+            </div>
         
         
-        </>
+        </div>
     )
 }
