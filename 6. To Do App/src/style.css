@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 700px;
+    margin: 0 auto;
+    height: 500px;
+    background-color: rgb(16, 53, 121);
+    margin-top: 50px;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    /* outline: solid red; */
+}
+
+
+
+.form {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    /* outline: solid red; */
+    justify-content: space-between;
+
+}
+
+.form input {
+    width: 80%;
+    padding: 20px;
+    font-size: 15px;
+    border-radius: 10px 0 0 10px;
+}
+
+.form button {
+    width: 20%;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+}
+.container h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.todo {
+    background: rgb(245, 245, 255);
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    color: black;
+}
+
+.todo button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: red;
+    gap: 5px;
+    margin: 2px;
+    color: white;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    overflow: scroll;
+    height: 400px;
+}
+
+::-webkit-scrollbar {
+    visibility: hidden;
+    width: 0px;
+}
