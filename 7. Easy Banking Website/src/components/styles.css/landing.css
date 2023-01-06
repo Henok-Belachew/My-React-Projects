@@ -1,0 +1,142 @@
+.landing {
+    padding-left: 85px;
+    padding-right: 85px;
+    display: flex;
+    height: 90vh;
+    /* outline: rgb(97, 19, 19) solid; */
+    /* position: absolute; */
+z-index: 5;
+    top: 0px;
+    align-items: center;
+    max-width: 100vw;
+    /* border: solid red 2px; */
+    /* overflow: hidden; */
+    gap: 5px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 84px;
+    background-color: #fafafa;
+    
+    
+}
+#ln-bg {
+    width: 110%;
+    height: 150%;
+    position: absolute;
+    top: -200px;
+    right: -580px;
+}
+
+#mockup {
+    position: absolute;
+    top: -50px;
+    z-index: 8;
+    right: -120px;
+    /* zoom: 1000%; */
+    width: 57%;
+    height: 40%;
+}
+.landing .right {
+    width: 50%;
+    
+
+}
+
+.left p {
+    opacity: 70%;
+    line-height: 27px;
+    font-size: 20px;
+}
+
+.landing h1 {
+    font-size: 54px;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+.landing .left {
+    width: 40%;
+    /* outline: solid red; */
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: flex-start;
+}
+
+.landing .right img {
+    height: 100%;
+}
+
+@media (max-width: 400px) {
+
+    .landing {
+        padding-left: 85px;
+        padding-right: 85px;
+        display: flex;
+        height: 90vh;
+        /* outline: rgb(97, 19, 19) solid; */
+        /* position: absolute; */
+    z-index: 5;
+        top: 0px;
+        align-items: center;
+        max-width: 100vw;
+        /* border: solid red 2px; */
+        /* overflow: hidden; */
+        gap: 5px;
+        position: relative;
+        overflow: hidden;
+        margin-top: 84px;
+        background-color: #fafafa;
+        
+        
+    }
+    #ln-bg {
+        width: 55%;
+        height: 740%;
+        position: absolute;
+        top: -200px;
+        right: -580px;
+    }
+    
+    #mockup {
+        position: absolute;
+        top: -20px;
+        z-index: 8;
+        right: -20px;
+        /* zoom: 1000%; */
+        width: 27%;
+        height: 10%;
+    }
+    .landing .right {
+        width: 50%;
+        
+    
+    }
+    
+    .left p {
+        opacity: 70%;
+        line-height: 27px;
+        font-size: 20px;
+    }
+    
+    .landing h1 {
+        font-size: 54px;
+        font-family: sans-serif;
+        font-weight: normal;
+    }
+    
+    .landing .left {
+        width: 40%;
+        /* outline: solid red; */
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        align-items: flex-start;
+    }
+    
+    .landing .right img {
+        height: 100%;
+    }
+}

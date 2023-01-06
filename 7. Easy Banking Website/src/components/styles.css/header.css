@@ -1,0 +1,46 @@
+header {
+    background: rgb(255, 255, 255);
+    padding: 25px 85px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.041);
+    max-height: 84px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+
+header ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+header ul a {
+    text-decoration: none;
+    color: grey;
+    font-size: 15px;
+
+    
+}
+
+header ul a:hover {
+
+    color: #31d35c;
+
+}
+
+
+
+
+#invite-btn {
+    background-image: linear-gradient(-90deg,#2bb7da,#31d35c);
+    border-radius: 25px;
+    padding: 15px 35px;
+    border: none;
+    color: white;
+
+    
+}

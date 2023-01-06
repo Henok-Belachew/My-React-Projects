@@ -1,0 +1,114 @@
+.articles {
+    background-color: #fafafa;
+    /* height: 200px; */
+    padding: 90px 105px;
+}
+
+.articles h2  {
+    font-weight: normal;
+    font-size: 34px;
+}
+.article-container {
+    display: flex;
+    gap: 20px;
+}
+.ArticleCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   margin-top: 50px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 55px rgba(0, 0, 0, 0.027);
+}
+
+.ArticleCard img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: 100%;
+}
+
+.lower {
+    width: 80%;
+    margin: 20px 0;
+}
+
+.ArticleCard h4 {
+    margin: 5px 0;
+    font-size: small;
+    font-weight: normal;
+    opacity: 70%;
+}
+
+.ArticleCard h3 {
+    font-weight: 500;
+    margin: 10px 0;
+    opacity: 90%;
+}
+
+.ArticleCard p{
+    font-size: 13px;
+    opacity: 70%;
+    line-height: 20px;
+}
+
+@media (max-width: 400px) {
+
+    .articles {
+        background-color: #fafafa;
+        /* height: 200px; */
+        padding: 50px 48px;
+    }
+    
+    .articles h2  {
+        font-weight: normal;
+        font-size: 20px;
+    }
+    .article-container {
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+        justify-content: center;
+        align-items: center;
+    }
+    .ArticleCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       margin-top: 15px;
+        width: 300px;
+        background-color: white;
+        border-radius: 10px 10px 0 0;
+        box-shadow: 0 0 55px rgba(0, 0, 0, 0.027);
+    }
+    
+    .ArticleCard img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        height: 100%;
+    }
+    
+    .lower {
+        width: 80%;
+        margin: 20px 0;
+    }
+    
+    .ArticleCard h4 {
+        margin: 5px 0;
+        font-size: small;
+        font-weight: normal;
+        opacity: 80%;
+    }
+    
+    .ArticleCard h3 {
+        font-weight: normal;
+        margin: 10px 0;
+    }
+    
+    .ArticleCard p{
+        font-size: 13px;
+        opacity: 80%;
+        /* line-height: 25px; */
+    }
+}
