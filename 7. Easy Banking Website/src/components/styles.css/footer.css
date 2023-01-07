@@ -61,6 +61,16 @@
 .box4 {
     width: 20%;
 }
+
+.icns {
+    color:aqua;
+    fill: aqua;
+    stop-color: aqua;
+    flood-color: aqua;
+    background-color: #2d314d;
+    /* background-color: aqua; */
+    /* outline: solid red 2px; */
+}
 #copyright {
     font-size: 15px;
     opacity: 70%;

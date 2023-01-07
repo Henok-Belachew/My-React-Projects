@@ -14,11 +14,11 @@ export default function Footer (){
     <img src={logo} alt="" />
 
     <div className="social-icons">
-        <img src={fb} alt="" />
-        <img src={insta} alt="" />
-        <img src={twitter} alt="" />
-        <img src={youtube} alt="" />
-        <img src={pinterest} alt="" />
+        <img className="icns" src={fb} alt="" />
+        <img className="icns" src={insta} alt="" />
+        <img className="icns" src={twitter} alt="" />
+        <img className="icns" src={youtube} alt="" />
+        <img className="icns" src={pinterest} alt="" />
     </div>
 </div>
 <div className="box">
