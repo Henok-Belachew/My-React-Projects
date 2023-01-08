@@ -13,6 +13,28 @@ import { useState } from "react";
 export default function Main () {
     
     const [PanelNum, setPanelNum] = useState(1);
+
+    // State for storing usering input data
+    const [userData, setUserData] = useState(
+        {
+            step_1: {
+                Name: "",
+                Email: "",
+                Phone_Number: "",
+            },
+            step_2: {
+                Monthly: true,
+                Plan: "",
+                Price: "",
+            },
+            step_3: {
+                add_on_1: "",
+                add_on_2: "",
+                add_on_3: ""
+            }
+
+        }
+    )
     
     return (
 
@@ -22,7 +44,7 @@ export default function Main () {
                 <AllSteps PanelNum={PanelNum} />
                 
                 {PanelNum == 1 && <Panel_1 PanelNum={PanelNum} UpdatePanel={setPanelNum}/>}
-                {PanelNum == 2 && <Panel_2 PanelNum={PanelNum} UpdatePanel={setPanelNum}/>}
+                {PanelNum == 2 && <Panel_2 PanelNum={PanelNum} UpdatePanel={setPanelNum} userData={userData} setUserData={setUserData}/>}
                 {PanelNum == 3 && <Panel_3 PanelNum={PanelNum} UpdatePanel={setPanelNum}/>}
                 {PanelNum == 4 && <Panel_4 PanelNum={PanelNum} UpdatePanel={setPanelNum}/>}
                 {PanelNum == 5 && <ThankYou/>}

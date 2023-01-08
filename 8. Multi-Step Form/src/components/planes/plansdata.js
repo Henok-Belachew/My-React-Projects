@@ -6,22 +6,22 @@ export default [
     {
         icon: Acrade,
         plan: "Acrade",
-        monthly: "$9/mo",
-        yearly: "$90/yr"
+        monthly: 9,
+        yearly: 90
 
     },
     {
         icon: Advanced,
         plan: "Advanced",
-        monthly: "$12/mo",
-        yearly: "$120/yr"
+        monthly: 12,
+        yearly: 120
 
     },
     {
         icon: Pro,
         plan: "Pro",
-        monthly: "$15/mo",
-        yearly: "$150/yr"
+        monthly: 15,
+        yearly: 150
 
     }
 ]
