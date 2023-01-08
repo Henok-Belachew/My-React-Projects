@@ -36,6 +36,8 @@ export default function Main () {
         }
     )
     
+    function changePlan() {
+     }
     return (
 
         
@@ -44,7 +46,7 @@ export default function Main () {
                 <AllSteps PanelNum={PanelNum} />
                 
                 {PanelNum == 1 && <Panel_1 PanelNum={PanelNum} UpdatePanel={setPanelNum}/>}
-                {PanelNum == 2 && <Panel_2 PanelNum={PanelNum} UpdatePanel={setPanelNum} userData={userData} setUserData={setUserData}/>}
+                {PanelNum == 2 && <Panel_2 PanelNum={PanelNum} UpdatePanel={setPanelNum} step_2={userData.step_2} setUserData={setUserData}/>}
                 {PanelNum == 3 && <Panel_3 PanelNum={PanelNum} UpdatePanel={setPanelNum}/>}
                 {PanelNum == 4 && <Panel_4 PanelNum={PanelNum} UpdatePanel={setPanelNum}/>}
                 {PanelNum == 5 && <ThankYou/>}
