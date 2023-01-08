@@ -1,8 +1,38 @@
 import React from "react";
+import { useState } from "react";
 import "./panel.css"
-import NextBtn from "./nextBtn";
+import Plan from "./plan";
+import plansdata from "./plansdata";
 
-export default function panel_2 (props) {
+export default function Panel_2 (props) {
+
+
+    const [Yearly, setYearly] = useState(false) 
+
+    function changePlan() {
+        setYearly((old)=>{
+            return (old ? false : true)
+        })
+    }
+
+    const plan = plansdata.map((item)=>{
+        return (
+            <Plan icon={item.icon} plan={item.plan} monthly={item.monthly} yearly={item.yearly} planType={Yearly} />
+        )
+    })
+
+    const monActive = {
+        opacity: Yearly ? "50%" : "100%",
+    }
+
+    const yrActive = {
+        opacity: Yearly ? "100%" : "50%",
+    }
+
+    const OnOff = {
+        justifyContent: Yearly ? "flex-end" : "flex-start",
+    }
+
     function ChangePanel() {
 
         props.UpdatePanel (props.PanelNum+1)
@@ -20,6 +50,17 @@ export default function panel_2 (props) {
 </p>
 
         <div className="plans">
+            {plan}
+        </div>
+        <div className="switch">
+
+            <span className="innerSwitch">
+                <span className="mon" style={monActive}>Monthly</span>  
+                <span onClick={changePlan} style={OnOff} className="bar">
+                    <span className="circle"></span>
+                </span>
+                <span style={yrActive} className="yr">Yearly</span> 
+            </span>
             
         </div>
         </div>

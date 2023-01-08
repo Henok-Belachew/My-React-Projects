@@ -113,10 +113,119 @@
 
 /* Step-1 End */
 
+
+/* Step-2 Start */
+
 .panel-2 {
     background-color: white;
 
 }
+
+.plans {
+    display: flex;
+    gap: 10px;
+    margin-top: 34px;
+    /* outline: solid red 1px; */
+    justify-content: space-between;
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 30%;
+    align-items: flex-start;
+    padding: 12px;
+    border-radius: 15px;
+    border: solid 2px rgba(0, 0, 0, 0.212);
+}
+
+.plan h2 {
+    /* opacity: 60%; */
+    font-size: 15px;
+    /* font-weight: 1200; */
+}
+
+.plan-price {
+    font-size: 11px;
+    opacity: 60%;
+    font-weight: 500;
+    color: black;
+}
+
+.plan img {
+    width: 34px;
+}
+
+.plan-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.free {
+    font-size: 11px;
+    font-weight: bolder;
+    
+}
+
+/* Styling switch section */
+.switch {
+    padding: 15px;
+    background-color:#f8f9fe;
+    border-radius: 10px;
+    
+    margin: 20px 0;
+   
+}
+
+.innerSwitch {
+    display: flex;
+    justify-content: space-between;
+    /* outline: solid red 1px; */
+    width: 50%;
+    margin: 0 auto;
+    font-size: 12px;
+    font-weight: bolder;
+
+}
+
+.bar {
+    width: 30px;
+    border-radius: 50px;
+    height: fit-content;
+    
+    background-color: #02295a;
+    color: #02295a;
+    user-select: none;
+    /* padding: 4px; */
+    display: flex;
+    align-items: center;
+
+    /* togle controller */
+    
+    cursor: pointer;
+    /* position: relative; */
+    
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    color: white;
+    background-color: white;
+    border-radius: 7px;
+    font-size: 10px;
+    display: block;
+    align-self: flex-start;
+    margin: 3px 4px;
+    /* position: a; */
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+
+/* Step-2 End */
 
 .panel-3 {
     background-color: white;
