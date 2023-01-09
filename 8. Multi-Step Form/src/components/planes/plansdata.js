@@ -7,21 +7,24 @@ export default [
         icon: Acrade,
         plan: "Acrade",
         monthly: 9,
-        yearly: 90
+        yearly: 90,
+        num: 1
 
     },
     {
         icon: Advanced,
         plan: "Advanced",
         monthly: 12,
-        yearly: 120
+        yearly: 120,
+        num: 2
 
     },
     {
         icon: Pro,
         plan: "Pro",
         monthly: 15,
-        yearly: 150
+        yearly: 150,
+        num: 3
 
     }
 ]

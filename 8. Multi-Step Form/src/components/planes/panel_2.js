@@ -17,7 +17,7 @@ export default function Panel_2 (props) {
 
     const plan = plansdata.map((item)=>{
         return (
-            <Plan icon={item.icon} plan={item.plan} monthly={item.monthly} yearly={item.yearly} planType={Yearly} />
+            <Plan  planNum={item.num} selected={props.planSelected} icon={item.icon} plan={item.plan} monthly={item.monthly} yearly={item.yearly} planType={Yearly} />
         )
     })
 
@@ -51,6 +51,7 @@ export default function Panel_2 (props) {
 
         <div className="plans">
             {plan}
+            
         </div>
         <div className="switch">
 

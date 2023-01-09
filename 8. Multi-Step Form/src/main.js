@@ -18,14 +18,14 @@ export default function Main () {
     const [userData, setUserData] = useState(
         {
             step_1: {
-                Name: "",
-                Email: "",
-                Phone_Number: "",
+                Name: "e.g. Henok Belachew",
+                Email: "e.g. example@gmail.com",
+                Phone_Number: "e.g. +251 9546 23",
             },
             step_2: {
                 Monthly: true,
-                Plan: "",
-                Price: "",
+                Plan: 1,
+                Price: 0,
             },
             step_3: {
                 add_on_1: "",
@@ -36,6 +36,38 @@ export default function Main () {
         }
     )
     
+
+
+        // functions that updates the step - 1 input data
+        function updateStep_1 (newData) {
+
+            setUserData(oldData => {
+                return {...oldData,
+                    step_1: {
+                        Name: newData[0],
+                        Email: newData[1],
+                        Phone_Number: newData[2]
+                    }}
+            })
+                    
+        }
+
+         // functions that updates the step - 2 user choice
+         function updateStep_2 (newData) {
+
+            setUserData(oldData => {
+                return {...oldData,
+                    step_2: {
+                        Monthly: newData[0],
+                        Plan: newData[1],
+                        Price: newData[2]
+                    }}
+            })
+                    
+        }
+
+
+
     function changePlan() {
      }
     return (
@@ -45,8 +77,33 @@ export default function Main () {
         <div className="main">
                 <AllSteps PanelNum={PanelNum} />
                 
-                {PanelNum == 1 && <Panel_1 PanelNum={PanelNum} UpdatePanel={setPanelNum}/>}
-                {PanelNum == 2 && <Panel_2 PanelNum={PanelNum} UpdatePanel={setPanelNum} step_2={userData.step_2} setUserData={setUserData}/>}
+                {PanelNum == 1 && <Panel_1 PanelNum={PanelNum} UpdatePanel={setPanelNum}
+                
+                // Passing User Input values
+
+                name={userData.step_1.Name}
+                email={userData.step_1.Email}
+                Phone_Number = {userData.step_1.Phone_Number}
+
+                // Passing function that updates the state
+                updateStep_1 = {updateStep_1}
+
+            
+            
+            
+                
+                
+                
+                
+                />}
+                {PanelNum == 2 && <Panel_2 
+                PanelNum={PanelNum} 
+                UpdatePanel={setPanelNum} 
+                step_2={userData.step_2} 
+                setUserData={setUserData}
+                planSelected = {userData.step_2.Plan}
+                
+                />}
                 {PanelNum == 3 && <Panel_3 PanelNum={PanelNum} UpdatePanel={setPanelNum}/>}
                 {PanelNum == 4 && <Panel_4 PanelNum={PanelNum} UpdatePanel={setPanelNum}/>}
                 {PanelNum == 5 && <ThankYou/>}
