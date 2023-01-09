@@ -8,6 +8,7 @@ import Panel_4 from "./components/planes/panel_4";
 import ThankYou from "./components/planes/ThankYou";
 
 import { useState } from "react";
+import { type } from "@testing-library/user-event/dist/type";
 
 
 export default function Main () {
@@ -23,7 +24,7 @@ export default function Main () {
                 Phone_Number: "e.g. +251 9546 23",
             },
             step_2: {
-                Monthly: true,
+                Yearly: false,
                 Plan: 1,
                 Price: 0,
             },
@@ -52,24 +53,35 @@ export default function Main () {
                     
         }
 
-         // functions that updates the step - 2 user choice
-         function updateStep_2 (newData) {
+        //  function that updates the selected plan when clicked
+         function updatePlan (newPlan, type) {
 
             setUserData(oldData => {
                 return {...oldData,
                     step_2: {
-                        Monthly: newData[0],
-                        Plan: newData[1],
-                        Price: newData[2]
+                        ...oldData.step_1,
+                        Yearly: type,
+                        Plan: newPlan
                     }}
             })
                     
         }
 
+        // function that changes the type of plan yearly or monthly
+        function updateType (newType, plan) {
+            setUserData(oldData => {
+                return {...oldData,
+                    step_2: {
+                        ...oldData.step_1,
+                        Yearly: newType,
+                        Plan: plan
+                    }}
+            })
+        }
 
 
-    function changePlan() {
-     }
+
+ 
     return (
 
         
@@ -96,12 +108,16 @@ export default function Main () {
                 
                 
                 />}
-                {PanelNum == 2 && <Panel_2 
+                {PanelNum == 2 && <Panel_2  
                 PanelNum={PanelNum} 
                 UpdatePanel={setPanelNum} 
-                step_2={userData.step_2} 
-                setUserData={setUserData}
+               
+              
+                PlanType = {userData.step_2.Yearly}
+                updateType = {updateType}
                 planSelected = {userData.step_2.Plan}
+                // Passing function that updates the selected plan
+                updatePlan = {updatePlan}
                 
                 />}
                 {PanelNum == 3 && <Panel_3 PanelNum={PanelNum} UpdatePanel={setPanelNum}/>}

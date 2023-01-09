@@ -7,17 +7,26 @@ import plansdata from "./plansdata";
 export default function Panel_2 (props) {
 
 
-    const [Yearly, setYearly] = useState(false) 
+    
+    
+    const Yearly = props.PlanType
+
+    
 
     function changePlan() {
-        setYearly((old)=>{
-            return (old ? false : true)
-        })
+        props.updateType( !props.PlanType, props.planSelected
+           
+         )
+
+       
+        
     }
+
+  
 
     const plan = plansdata.map((item)=>{
         return (
-            <Plan  planNum={item.num} selected={props.planSelected} icon={item.icon} plan={item.plan} monthly={item.monthly} yearly={item.yearly} planType={Yearly} />
+            <Plan  updatePlan={props.updatePlan}  planNum={item.num} selected={props.planSelected} icon={item.icon} plan={item.plan} monthly={item.monthly} yearly={item.yearly} planType={props.PlanType} />
         )
     })
 

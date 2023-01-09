@@ -16,21 +16,37 @@ export default function panel_1(props) {
     // Getting the value of the user data fron input fields
     const step_1 = []
     function setName (event) {
-        step_1[0] = event.target.value
+
+       
+            step_1[0] = event.target.value
+       
+        
     }
 
     function setEmail (event) {
-        step_1[1] = event.target.value 
+      
+
+            step_1[1] = event.target.value 
+
+        
+       
+        
     }
 
     function setPhone (event) {
-        step_1[2] = event.target.value
+  
+            step_1[2] = event.target.value
+        
+        
     }
 
     // Passing the user data to the states
 
     function updateStep_1(){
+
+        if (  step_1[0] !== undefined  ) {
         props.updateStep_1(step_1)
+        }
     }
 
     
