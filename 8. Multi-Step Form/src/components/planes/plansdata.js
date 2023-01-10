@@ -8,7 +8,7 @@ export default [
         plan: "Acrade",
         monthly: 9,
         yearly: 90,
-        num: 1
+        num: 0
 
     },
     {
@@ -16,7 +16,7 @@ export default [
         plan: "Advanced",
         monthly: 12,
         yearly: 120,
-        num: 2
+        num: 1
 
     },
     {
@@ -24,7 +24,7 @@ export default [
         plan: "Pro",
         monthly: 15,
         yearly: 150,
-        num: 3
+        num: 2
 
     }
 ]

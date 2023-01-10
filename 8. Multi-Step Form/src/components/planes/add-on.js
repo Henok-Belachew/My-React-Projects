@@ -9,7 +9,7 @@ export default function AddOns(props) {
     // var checkStatus = false
 
     // getting the status of the add-on
-    const newStatus = props.addOns[props.id]
+    // const newStatus = props.addOns[props.id]
     let theStatus = false
    
 
@@ -67,10 +67,10 @@ export default function AddOns(props) {
                 </div>
 
                 <h3 className="price-3">
-                    +${true && props.userData[props.id].monPrice} 
-                    {true && "/mo"}
-                    {false && props.userData[props.id].yrPrice}
-                    {false && "/yr"}
+                    +${!props.Yearly && props.userData[props.id].monPrice} 
+                    {!props.Yearly && "/mo"}
+                    {props.Yearly && props.userData[props.id].yrPrice}
+                    {props.Yearly && "/yr"}
                 </h3>
             </div>
     )

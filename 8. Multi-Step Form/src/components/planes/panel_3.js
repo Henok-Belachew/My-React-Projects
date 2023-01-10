@@ -1,7 +1,7 @@
 import React from "react";
 import "./panel.css"
 import AddOns from "./add-on";
-
+import addonData from "./addonData";
 
 export default function panel_3(props) {
 
@@ -17,7 +17,7 @@ export default function panel_3(props) {
     else if (props.id == 3) {
         theStatus = props.addons3
     }
-    const addons = props.Data.map(
+    const addons = addonData.map(
         (item)=> {
             return (
                 <AddOns addons = {theStatus}
@@ -25,7 +25,7 @@ export default function panel_3(props) {
                 selected={item.selected}
                 feature={item.feature} 
                 discription={item.discription}
-                userData={props.Data}
+                userData={addonData}
                 
                
                 // passing necessesary states and their methods
@@ -44,7 +44,8 @@ export default function panel_3(props) {
                 setLarge = {props.setLarge}
                 setCustom = {props.setCustom}
 
-                addOns = {props.addOns}
+                // addOns = {props.addOns}
+                Yearly = {props.Yearly}
                 addonsStatus = {props.addonsStatus}
                 updateStep3 = {props.updateStep3}
                 />

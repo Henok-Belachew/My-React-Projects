@@ -23,82 +23,21 @@ export default function Main () {
     const [addons2, setaddons2] = useState(true)
     const [addons3, setaddons3] = useState(true)
 
-    // functions that update the above add ons states
-    function updateAddons1 (newStatus) {
-        setaddons1(newStatus)
-    }
-    // updateAddons1(true)
+   
 
-    // setaddons1(true)
+
+
+
     
-    // function the new status of add on
-    function updateAddOnStatus() {
-        setaddOns(  
-           
-        // addOns[0].status: true
-           
-        )
-    }
-
-    // updateAddOnStatus(false, 1)
-
-
-    // Different states for each add-ons 
-    const [onlineService, setOnline] = useState(false)
-    const [largeStorage, setLarge] = useState(false)
-    const [customProfile, setCustom] = useState(false)
-
-    // 
 
       // State for the add-ons section
 
       
-      const [step_3, setStep3States] = useState ( [
-        
-            {
-                id: 0,
-                selected: false,
-                feature: "Online Service",
-                discription: "Acces to multiplayer games",
-                monPrice: 1,
-                yrPrice: 10
-        
-            },
-            {
-                id: 1,
-                selected: false,
-                feature: "Larger Storage",
-                discription: "Extra 1TB cloud save",
-                monPrice: 2,
-                yrPrice: 20
-        
-            },
-            {
-                id: 2,
-                selected: false,
-                feature: "Custimizable Profile",
-                discription: "Custom theme on your profile",
-                monPrice: 2,
-                yrPrice: 20
-        
-            }
-        ]
-        
-    )
+      
     // function that updates the status of add-ons
 
-    function updateAddOns (newStatus, id) {
-        setStep3States(oldData => {
-            return {...oldData,
-                step_3: {...oldData,
-                    
-                    
-                } }
-        })
-    } 
 
-    console.log(step_3[0])
-    console.log("voerhere")
+  
 
     // State for storing usering input data
     const [userData, setUserData] = useState(
@@ -110,7 +49,7 @@ export default function Main () {
             },
             step_2: {
                 Yearly: false,
-                Plan: 1,
+                Plan: 0,
                 Price: 0,
             },
             step_3: [ false, false, false ]
@@ -219,35 +158,30 @@ export default function Main () {
 
                 {PanelNum == 3 && <Panel_3 PanelNum={PanelNum} UpdatePanel={setPanelNum}
                 
-                Data = {step_3}
+                
                 selectedAdd = {userData.step_3}
 
-                // passing the state of each add-ons
-                onlineService = {onlineService}
-                largeStorage= {largeStorage}
-                customProfile = {customProfile}
-
-                // passing state methods of each add-ons state
-
-                setOnline ={setOnline}
-                setLarge = {setLarge}
-                setCustom = {setCustom}
-
+             
                 // passing the state of each add-ons together
                 addOns = {addOns}
 
                 // passing the state of each add-ons separately
-                addons1 = {addons1}
-                addons2 = {addons2}
-                addons3 = {addons3}
+               
 
                 // passing the state of add ons from main state object
 
                 addonsStatus = {userData.step_3}
                 updateStep3 = {updateStep3}
 
+                Yearly = {userData.step_2.Yearly}
+
                 />}
-                {PanelNum == 4 && <Panel_4 PanelNum={PanelNum} UpdatePanel={setPanelNum}/>}
+                {PanelNum == 4 && <Panel_4 PanelNum={PanelNum} UpdatePanel={setPanelNum}
+                
+                selectedPlan = {userData.step_2.Plan}
+                Yearly = {userData.step_2.Yearly}
+                addOnStatus = {userData.step_3}
+                />}
                 {PanelNum == 5 && <ThankYou/>}
                 
         </div>
