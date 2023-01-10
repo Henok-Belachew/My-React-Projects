@@ -14,6 +14,79 @@ import { type } from "@testing-library/user-event/dist/type";
 export default function Main () {
     
     const [PanelNum, setPanelNum] = useState(1);
+   
+    // Add-ons state
+    const [addOns, setaddOns] = useState([
+        {
+            id: 1,
+            status: true,
+            // cheker: addOns[0].status ? "checked" : ""
+        },
+        {
+            id: 2,
+            status: true,
+        },
+        {
+            id: 3,
+            status: false,
+        }]
+    )
+    // Different states for each add-ons 
+    const [onlineService, setOnline] = useState(false)
+    const [largeStorage, setLarge] = useState(false)
+    const [customProfile, setCustom] = useState(false)
+
+    // 
+
+      // State for the add-ons section
+
+      
+      const [step_3, setStep3States] = useState ( [
+        
+            {
+                id: 0,
+                selected: false,
+                feature: "Online Service",
+                discription: "Acces to multiplayer games",
+                monPrice: 1,
+                yrPrice: 10
+        
+            },
+            {
+                id: 1,
+                selected: false,
+                feature: "Larger Storage",
+                discription: "Extra 1TB cloud save",
+                monPrice: 2,
+                yrPrice: 20
+        
+            },
+            {
+                id: 2,
+                selected: false,
+                feature: "Custimizable Profile",
+                discription: "Custom theme on your profile",
+                monPrice: 2,
+                yrPrice: 20
+        
+            }
+        ]
+        
+    )
+    // function that updates the status of add-ons
+
+    function updateAddOns (newStatus, id) {
+        setStep3States(oldData => {
+            return {...oldData,
+                step_3: {...oldData,
+                    
+                    
+                } }
+        })
+    } 
+
+    console.log(step_3[0])
+    console.log("voerhere")
 
     // State for storing usering input data
     const [userData, setUserData] = useState(
@@ -28,14 +101,22 @@ export default function Main () {
                 Plan: 1,
                 Price: 0,
             },
-            step_3: {
-                add_on_1: "",
-                add_on_2: "",
-                add_on_3: ""
-            }
+            step_3: [
+                {
+                    selected: false,
+                    feature: "Online Service",
+                    discription: "Acces to multiplayer games",
+                    monPrice: 1,
+                    yrPrice: 10
+            
+                }
+            ]
+            
 
         }
     )
+
+  
     
 
 
@@ -63,8 +144,7 @@ export default function Main () {
                         Yearly: type,
                         Plan: newPlan
                     }}
-            })
-                    
+            })  
         }
 
         // function that changes the type of plan yearly or monthly
@@ -79,6 +159,9 @@ export default function Main () {
             })
         }
 
+
+        // function that updates the status of add-ons
+           
 
 
  
@@ -120,7 +203,27 @@ export default function Main () {
                 updatePlan = {updatePlan}
                 
                 />}
-                {PanelNum == 3 && <Panel_3 PanelNum={PanelNum} UpdatePanel={setPanelNum}/>}
+
+                {PanelNum == 3 && <Panel_3 PanelNum={PanelNum} UpdatePanel={setPanelNum}
+                
+                Data = {step_3}
+                selectedAdd = {userData.step_3}
+
+                // passing the state of each add-ons
+                onlineService = {onlineService}
+                largeStorage= {largeStorage}
+                customProfile = {customProfile}
+
+                // passing state methods of each add-ons state
+
+                setOnline ={setOnline}
+                setLarge = {setLarge}
+                setCustom = {setCustom}
+
+                // passing the state of each add-ons together
+                addOns = {addOns}
+
+                />}
                 {PanelNum == 4 && <Panel_4 PanelNum={PanelNum} UpdatePanel={setPanelNum}/>}
                 {PanelNum == 5 && <ThankYou/>}
                 

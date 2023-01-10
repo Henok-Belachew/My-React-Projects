@@ -1,9 +1,44 @@
 import React from "react";
 import "./panel.css"
-import NextBtn from "./nextBtn";
+import AddOns from "./add-on";
 
 
 export default function panel_3(props) {
+
+
+    // fetching the passed data through props
+
+    const addons = props.Data.map(
+        (item)=> {
+            return (
+                <AddOns 
+                id = {item.id}
+                selected={item.selected}
+                feature={item.feature} 
+                discription={item.discription}
+                userData={props.Data}
+                
+                // passing necessesary states and their methods
+
+                // passing the state of each add-ons
+                onlineService = {props.onlineService}
+                largeStorage= {props.largeStorage}
+                customProfile = {props.customProfile}
+
+                // passing state methods of each add-ons state
+
+                setOnline ={props.setOnline}
+                setLarge = {props.setLarge}
+                setCustom = {props.setCustom}
+
+                addOns = {props.addOns}
+                />
+            )
+        }
+    )
+
+    console.log(props.Data)
+
     function ChangePanel() {
 
         props.UpdatePanel (props.PanelNum+1)
@@ -21,40 +56,9 @@ export default function panel_3(props) {
 
         <div className="add-ons">
 
-            {/* add-ons 1 */}
-            <div className="adds">
-                <input type="checkbox" />
+            
+           {addons}
 
-                <div className="adds-info">
-                    <h3>Online Serivce</h3>
-                    <p>Acces to multiplayer games</p>
-                </div>
-
-                <h3 className="price-3">+$2/mo</h3>
-            </div>
-
-            {/* add-ons 2 */}
-            <div className="adds">
-                <input type="checkbox" />
-
-                <div className="adds-info">
-                    <h3>Larger Storage</h3>
-                    <p>Extra 1TB cloud save</p>
-                </div>
-
-                <h3 className="price-3">+$2/mo</h3>
-            </div>
-            {/* add-ons 3 */}
-            <div className="adds">
-                <input type="checkbox" />
-
-                <div className="adds-info">
-                    <h3>Custimizable Profile</h3>
-                    <p>Custom theme on your profile</p>
-                </div>
-
-                <h3 className="price-3">+$2/mo</h3>
-            </div>
         </div>
         </div>
 

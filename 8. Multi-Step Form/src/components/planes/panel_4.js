@@ -28,14 +28,21 @@ export default function panel_4(props) {
                 </div>
                 <div className="lower">
                     <hr />
+                    {true &&
                     <span className="row">
                         <span>Online service </span>
                         <span>+$1/mo</span>
-                    </span>
+                    </span> }
+                    {true &&
                     <span className="row">
-                        <span>Online service </span>
+                        <span>Larger Storage</span>
                         <span>+$1/mo</span>
-                    </span>
+                    </span> }
+                    {true &&
+                    <span className="row">
+                        <span>Custimizable Profile</span>
+                        <span>+$1/mo</span>
+                    </span> }
                 </div>
             </div>
             <span className="total"> <h5>Total(per month)</h5> <h5>+$12/mo</h5></span>
