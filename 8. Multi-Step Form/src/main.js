@@ -16,21 +16,33 @@ export default function Main () {
     const [PanelNum, setPanelNum] = useState(1);
    
     // Add-ons state
-    const [addOns, setaddOns] = useState([
-        {
-            id: 0,
-            status: true,
-            // cheker: addOns[0].status ? "checked" : ""
-        },
-        {
-            id: 1,
-            status: true,
-        },
-        {
-            id: 2,
-            status: false,
-        }]
-    )
+    const [addOns, setaddOns] = useState([true, false, true])
+
+    // State for each add_ons
+    const [addons1, setaddons1] = useState(false)
+    const [addons2, setaddons2] = useState(true)
+    const [addons3, setaddons3] = useState(true)
+
+    // functions that update the above add ons states
+    function updateAddons1 (newStatus) {
+        setaddons1(newStatus)
+    }
+    // updateAddons1(true)
+
+    // setaddons1(true)
+    
+    // function the new status of add on
+    function updateAddOnStatus() {
+        setaddOns(  
+           
+        // addOns[0].status: true
+           
+        )
+    }
+
+    // updateAddOnStatus(false, 1)
+
+
     // Different states for each add-ons 
     const [onlineService, setOnline] = useState(false)
     const [largeStorage, setLarge] = useState(false)
@@ -101,22 +113,23 @@ export default function Main () {
                 Plan: 1,
                 Price: 0,
             },
-            step_3: [
-                {
-                    selected: false,
-                    feature: "Online Service",
-                    discription: "Acces to multiplayer games",
-                    monPrice: 1,
-                    yrPrice: 10
-            
-                }
-            ]
+            step_3: [ false, false, false ]
             
 
         }
     )
 
-  
+        // function that updates the status of add on on step 3
+        function updateStep3 (add1, add2, add3) {
+
+            setUserData(oldData => {
+                return {...oldData,
+                    step_3: [
+                        add1, add2, add3
+                    ]}
+            })
+                    
+        }
     
 
 
@@ -170,7 +183,7 @@ export default function Main () {
         
 
         <div className="main">
-                <AllSteps PanelNum={PanelNum} />
+                <AllSteps  PanelNum={PanelNum} />
                 
                 {PanelNum == 1 && <Panel_1 PanelNum={PanelNum} UpdatePanel={setPanelNum}
                 
@@ -222,6 +235,16 @@ export default function Main () {
 
                 // passing the state of each add-ons together
                 addOns = {addOns}
+
+                // passing the state of each add-ons separately
+                addons1 = {addons1}
+                addons2 = {addons2}
+                addons3 = {addons3}
+
+                // passing the state of add ons from main state object
+
+                addonsStatus = {userData.step_3}
+                updateStep3 = {updateStep3}
 
                 />}
                 {PanelNum == 4 && <Panel_4 PanelNum={PanelNum} UpdatePanel={setPanelNum}/>}

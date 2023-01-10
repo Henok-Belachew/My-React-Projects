@@ -7,19 +7,32 @@ export default function panel_3(props) {
 
 
     // fetching the passed data through props
-
+    let theStatus = false
+    if (props.id == 1) {
+        theStatus = props.addons1
+    }
+    else if (props.id == 2) {
+        theStatus = props.addons2
+    }
+    else if (props.id == 3) {
+        theStatus = props.addons3
+    }
     const addons = props.Data.map(
         (item)=> {
             return (
-                <AddOns 
+                <AddOns addons = {theStatus}
                 id = {item.id}
                 selected={item.selected}
                 feature={item.feature} 
                 discription={item.discription}
                 userData={props.Data}
                 
+               
                 // passing necessesary states and their methods
 
+                addons1 = {props.addons1}
+                addons2 = {props.addons2}
+                addons3 = {props.addons3}
                 // passing the state of each add-ons
                 onlineService = {props.onlineService}
                 largeStorage= {props.largeStorage}
@@ -32,6 +45,8 @@ export default function panel_3(props) {
                 setCustom = {props.setCustom}
 
                 addOns = {props.addOns}
+                addonsStatus = {props.addonsStatus}
+                updateStep3 = {props.updateStep3}
                 />
             )
         }
@@ -40,6 +55,7 @@ export default function panel_3(props) {
     console.log(props.Data)
 
     function ChangePanel() {
+        // props.updateStep3(true, true, true)
 
         props.UpdatePanel (props.PanelNum+1)
 

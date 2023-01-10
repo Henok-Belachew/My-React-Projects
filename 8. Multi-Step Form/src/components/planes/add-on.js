@@ -3,34 +3,62 @@ import { useState } from "react";
 
 export default function AddOns(props) {
 
-    const id = props.id
+ 
     console.log(props.id+1)
     console.log("sum of id")
     // var checkStatus = false
 
+    // getting the status of the add-on
+    const newStatus = props.addOns[props.id]
+    let theStatus = false
+   
+
+    theStatus = props.addonsStatus[props.id]
+
+    
     const [checkStatus, setStatus] = useState(false)
     const style = {
 
       
-        border:  checkStatus ? "#473dff solid 1px" : "",
-        backgroundColor: checkStatus ? "#f8f9fe" : ""
-        // backgroundColor: props.addOns[props.id].status ?"#f8f9fe" : ""
+        border:  theStatus ? "#473dff solid 1px" : "",
+        backgroundColor: theStatus ? "#f8f9fe" : ""
+        // backgroundColor: props.addOns[props.id] ?"#f8f9fe" : ""
     }
 
     
     function checker () {
 
-        setStatus(!checkStatus)
-        console.log(checkStatus)
+       if (props.id == 0) {
+       props.updateStep3(!props.addonsStatus[0],props.addonsStatus[1], props.addonsStatus[2])
+
+        // document.getElementById("checkBox").checked = theStatus
+       
+       
+       
+    }
+    else if (props.id == 1) {
+        props.updateStep3(props.addonsStatus[0],!props.addonsStatus[1], props.addonsStatus[2])
+    }
+    else if (props.id == 2) {
+        props.updateStep3(props.addonsStatus[0],props.addonsStatus[1], !props.addonsStatus[2])
+    }
     }
 
+    
+
+
+    // function that returns checked
+
+    function checkMe() {
+        return "checked"
+    }
    
     
     return (
         <div style={style} className="adds">
-                <input 
-                 
+                <input id="checkBox"
                     onChange={checker}
+                    checked={theStatus}
                 type="checkbox" />
 
                 <div className="adds-info">
