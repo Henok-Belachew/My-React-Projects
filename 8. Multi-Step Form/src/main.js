@@ -18,16 +18,16 @@ export default function Main () {
     // Add-ons state
     const [addOns, setaddOns] = useState([
         {
-            id: 1,
+            id: 0,
             status: true,
             // cheker: addOns[0].status ? "checked" : ""
         },
         {
-            id: 2,
+            id: 1,
             status: true,
         },
         {
-            id: 3,
+            id: 2,
             status: false,
         }]
     )
