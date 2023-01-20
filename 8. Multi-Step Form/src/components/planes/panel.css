@@ -109,7 +109,16 @@
     background-color: white;
 }
 
+.upperField {
+    display: flex;
+    justify-content: space-between;
+}
 
+.required {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
 
 /* Step-1 End */
 
@@ -317,6 +326,8 @@
 
 }
 
+  
+
 .lower {
     display: flex;
     flex-direction: column;
@@ -328,10 +339,10 @@
 
 .summary h5 {
 
-    font-size: 13px;
+    font-size: 16px;
     margin-left: 15px;
-    opacity: 60%;
-    font-weight: normal;
+    /* opacity: 0%; */
+    font-weight: bold;
 
 }
 
@@ -344,6 +355,11 @@
 .total {
     display: flex;
     justify-content: space-between;
+}
+
+.total h5:first-child {
+    font-size: 13px;
+    opacity: 60%;
 }
 
 .total h5:nth-child(2) {

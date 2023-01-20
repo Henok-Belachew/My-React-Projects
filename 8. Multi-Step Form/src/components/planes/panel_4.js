@@ -27,6 +27,10 @@ export default function panel_4(props) {
     function goBack () {
         props.UpdatePanel (props.PanelNum-1)
     }
+
+    function updatetopanel2() {
+        props.UpdatePanel(2)
+    }
     return (
         <div className="panel-4 panel">
 
@@ -42,7 +46,7 @@ export default function panel_4(props) {
                         {props.Yearly && "(Yearly)"}
                         {!props.Yearly && "(Monthly)"}
                         </h4>
-                        <a href="#">Change</a>
+                        <a onClick={updatetopanel2} >Change</a>
                     </span>
                         <h5>
                        $
@@ -75,7 +79,7 @@ export default function panel_4(props) {
                     </span> }
                 </div>
             </div>
-            <span className="total"> <h5>Total(per month)</h5> <h5>${planPrice + add0 + add1 + add2 }
+            <span className="total"> <h5 className="gray">Total({props.Yearly ? "Yearly" : "Monthly"})</h5> <h5>${planPrice + add0 + add1 + add2 }
             {props.Yearly ? "/yr" : "/mon" }</h5></span>
            
         </div>
