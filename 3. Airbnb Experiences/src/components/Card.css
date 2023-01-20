@@ -9,12 +9,13 @@
     flex-direction: column;
     /* outline: solid red; */
     height: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .header p {
-    font-size: 20px;
-    margin: 10px 0;
+    font-size: 13px;
+    margin: 10px 0 5px;
+    width: 50%;
     /* margin-bottom: 2000px; */
     /* margin-top: 400px; */
     display: block;
@@ -29,8 +30,8 @@ i {
     /* position: absolute; */
 }
 .header h1{
-    font-size: 52px;
-    margin-bottom: auto;
+    font-size: 32px;
+    /* margin-bottom: auto; */
 }
 
 .imgs {
@@ -47,11 +48,11 @@ i {
     /* outline: solid yellow; */
 }
 
-::-webkit-scrollbar {
+.cards::-webkit-scrollbar {
     overflow: hidden;
 }
 .img {
-    width: 254px;
+    width: 220px;
 }
 
 img:hover {
@@ -60,20 +61,33 @@ img:hover {
 
 .nav {
     box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
-    height: 100px;
-    padding: 5px 100px;
+    /* height: 100px; */
+    padding: 20px 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+    background-color: white;
 
 }
 
+.nav img {
+    width: 130px;
+}
+
 .navs {
-    width: 25%;
+    width: 300px;
     /* outline: solid red; */
     display: flex;
     justify-content: space-between;
     font-size: 15px;
+}
+
+.navs a:hover {
+    font-weight: bold;
 }
 
 a {
@@ -82,22 +96,27 @@ a {
 }
 
 .landing {
-    margin: 30px auto 45px ;
+    margin: 120px auto 50px ;
     display: block;
-    width: 50%;
+    width: 45%;
     /* outline: solid red; */
     /* margin: 50px; */
     /* outline: solid red; */
 }
 
 .lower {
-    width: 70%;
+    width: 75%;
     margin: 0px auto;
     /* outline: solid red; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     /* height: 620px; */
+}
+
+.upper {
+    font-size: 13px;
+    font-weight: bold;
 }
 .main {
     /* height: 416px; */
@@ -134,7 +153,7 @@ a {
     padding: 8px 15px;
     border-radius: 10px;
     background-color: white;
-    font-size: smaller;
+    font-size: 12px;
     font-weight: bold;
 }
 .detail {
@@ -149,4 +168,9 @@ a {
 
 .price {
     font-weight: bold;
+    font-size: 13px;
+}
+
+.host {
+    font-size: 13px;
 }
