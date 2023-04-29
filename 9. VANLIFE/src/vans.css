@@ -1,0 +1,33 @@
+.filters {
+    display: flex;
+    /* gap: 10px; */
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.filters button, .clear {
+    width: 23%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+.filter{
+    background-color: #FFEAD0;
+}
+
+.clear, .vans {
+    background-color: #FFF7ED;
+}
+
+.clear {
+    text-decoration: underline;
+}
+.vans {
+    padding: 25px;
+}
