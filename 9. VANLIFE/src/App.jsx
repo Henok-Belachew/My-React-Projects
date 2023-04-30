@@ -1,8 +1,8 @@
 import React from "react";
 import Home from "./pages/Home";
 import Vans from "./pages/Vans";
+import Van_Detail from "./pages/VansDetail";
 import About from "./pages/About";
-import Data from "./API";
 import './index.css'
 import './vans.css'
 // import { About, Vans } from "./Components";
@@ -28,8 +28,10 @@ export default function App () {
         </nav>
         <Routes>
             <Route path="/about" element={<About/>}></Route>
-            <Route exact path="/" element={<Home/>}></Route>
-            <Route exact path="/vans" element={<Vans/>}></Route>
+            <Route path="/" element={<Home/>}></Route>
+            <Route path="/vans" element={<Vans/>}></Route>
+            <Route path="/vans/:id" element={<Van_Detail/>}></Route>
+            
         </Routes>
         </BrowserRouter>
         <footer>

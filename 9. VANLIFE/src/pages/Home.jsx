@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 import img from "../images/about.png";
 
 
@@ -14,16 +14,12 @@ export default function Home () {
                 Add adventure to your life by joining the #vanlife movement. Rent the perfect van to make your perfect road trip.
                 </p>
                 
-                
-                
-                    <button>
-                        Find your van
-                    </button>
-                
-                
-                    
-                
-                
+                    <Link  to="/vans">
+                        <button>
+                            Find your van
+                        </button>
+                    </Link>
+   
             </div>
             <div className="bg"></div>
             <img className="img1" src={img} alt="" />

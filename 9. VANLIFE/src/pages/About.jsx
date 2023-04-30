@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import vans from "../images/vans.png"
 
 export default function About () {
@@ -19,10 +20,11 @@ export default function About () {
                     Your van is ready.
                     </h2>
                     
-                    
-                    <button>
-                        Explore our vans
-                    </button>
+                    <Link  to="/vans">
+                        <button>
+                            Explore our vans
+                        </button>
+                    </Link> 
                     
                     
 

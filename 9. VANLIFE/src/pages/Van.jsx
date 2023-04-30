@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { useEffect, useState } from 'react'
 
@@ -22,16 +23,19 @@ export default function Van (props) {
     }
     useEffect(() => {
         updateStyle();
-      }, []); // <- add empty brackets here
+      }, []);
 
     return (
         <div className="van">
+           
+           <Link className='a-van' to={`/vans/${props.id}`}> 
                     <img className="van-img " src={props.img} alt="" />
                     <div className="btm">
                         <h2>{props.name}</h2>
                         <h2>{props.price} <span>/day</span> </h2>
                     </div>
                     <span style={ style } className="van-typ">{props.type}</span>   
+            </Link>
         </div>
     )
 }
