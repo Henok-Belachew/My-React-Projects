@@ -32,7 +32,7 @@ export default function Van (props) {
                     <img className="van-img " src={props.img} alt="" />
                     <div className="btm">
                         <h2>{props.name}</h2>
-                        <h2>{props.price} <span>/day</span> </h2>
+                        <h2>{props.price}<span>/day</span> </h2>
                     </div>
                     <span style={ style } className="van-typ">{props.type}</span>   
             </Link>

@@ -95,3 +95,61 @@
 .van-rug {
     background-color: #115E59;
 }
+
+
+/* Styling vanDetail  */
+
+.vanDetail {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px 20px;
+    background-color: #FFF7ED;
+    gap: 25px;
+    font-family: monospace;
+    line-height: 20px;
+    /* outline: solid red; */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.vanDetail p {
+    font-size: 14px;
+    text-justify:inter-word;
+}
+
+.typ-dt {
+    padding: 10px 50px;
+}
+
+.vanDetail img {
+    border-radius: 15px;
+
+}
+
+.vanDetail h2:nth-child(4) {
+    font-size: 27px;
+}
+
+.vanDetail h2 span{
+    font-weight:lighter;
+    font-size: 20px;
+    
+}
+
+.back {
+    font-size: smaller;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+
+.vanDetail button {
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    background-color: #E17654;
+    cursor: pointer;
+}
