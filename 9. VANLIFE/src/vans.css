@@ -30,4 +30,67 @@
 }
 .vans {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    /* outline: solid red; */
+    gap: 20px;
+}
+
+/* Styling Vans Display */
+
+.all-vans {
+    display: flex;
+    /* outline: solid red; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px 0;
+
+    /* overflow-wrap: ; */
+}
+
+.van {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* align-items: flex-start; */
+}
+
+.van h2 {
+    font-size: medium;
+}
+
+.van h2 span {
+    font-weight:lighter;
+    font-size: small;
+}
+.van-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.btm {
+    justify-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+.van-typ {
+    padding: 9px 35px;
+   
+    color: white;
+    border-radius: 5px;
+    font-size: small;
+    align-self: flex-start;
+}
+
+.van-smp {
+    background-color: #E17654;
+}
+
+.van-lux {
+    background-color: #161616;
+}
+
+.van-rug {
+    background-color: #115E59;
 }
