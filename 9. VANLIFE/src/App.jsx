@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./pages/Home";
 import Vans from "./pages/Vans";
 import About from "./pages/About";
+import Data from "./API";
 import './index.css'
 import './vans.css'
 // import { About, Vans } from "./Components";
@@ -10,6 +11,8 @@ import {BrowserRouter, Routes, Route, Link} from "react-router-dom"
 
 
 export default function App () {
+
+    
     return (
         
         

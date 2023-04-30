@@ -1,7 +1,7 @@
 import React from 'react'
-import Vans from './Vans';
+
 import img from "../images/about.png";
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom"
+
 
 export default function Home () {
     return (
